@@ -7,12 +7,6 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 
-def home(request):
-    return render(request,'home.html',)
-
-
-
-
 class UserRegisterView(generic.CreateView):
     form_class = UserCreationForm
     template_name = "registration/register.html"

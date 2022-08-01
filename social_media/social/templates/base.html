@@ -23,18 +23,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mb-2 mb-lg-0 ms-md-5">
               {% if user.is_authenticated %}
-              <li class="nav-item btn btn-outline-dark me-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'logout' %}">logout</a>
+              <li>
+                <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="{% url 'logout' %}">logout</a>
               </li>
               {% else %}
-              <li class="nav-item btn btn-outline-dark me-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'register' %}">register</a>
-              </li>
-              <li class="nav-item btn btn-outline-dark me-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'login' %}">login</a>
-              </li>
-              <li class="nav-item btn btn-outline-dark me-2">
-                <a class="nav-link active" aria-current="page" href="/admin/">login as admin</a>
+              <li>
+                <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="/admin/">login as admin</a>
               </li>
               {% endif %}
           </div>
