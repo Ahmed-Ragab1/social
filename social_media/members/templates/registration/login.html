@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    {% block body %}
+    <div class="container p-5 mt-3">
+      <div class="row">
+        <div class="col-12 col-md-6" style="text-align: right;">
+                <img src="https://www.iti.gov.eg/assets/images/iti-logo.png"
+                   alt="Sample image" style="margin-top: -100px;">
+        </div>
+        <div class="col-12 col-md-6">
+          <form method="POST">
+              {% csrf_token %}
+                  <form >
+                  <h1 style="text-align: center;"> Login page </h1>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="text" name="username" class="form-control" autocomplete="username" required />
+                    <label class="form-label" for="form2Example1">username</label>
+                  </div>
+                
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" name="password" class="form-control" required autocomplete="current-password"/>
+                    <label class="form-label" for="form2Example2">Password</label>
+                  </div>
+                    <!-- <div class="col">
+                      <a href="#!">Forgot password?</a>
+                    </div>
+                  </div> -->
+                
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4 w-100">Sign in</button>
+                
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
+                    <p>or sign up with:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fa fa-facebook-f"></i>
+                    </button>
+                
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fa fa-google"></i>
+                    </button>
+                
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fa fa-twitter"></i>
+                    </button>
+                
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fa fa-github"></i>
+                    </button>
+                </form>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+    {% endblock %}
+</body>
+</html>
