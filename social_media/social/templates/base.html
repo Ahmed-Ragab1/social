@@ -11,6 +11,10 @@
         text-decoration: none;
       }
     </style>
+    {% block head %}
+      
+      
+    {% endblock %}
 </head>
 <body>
   <div style="width: 100%; ">
@@ -26,9 +30,19 @@
               <li>
                 <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="{% url 'logout' %}">logout</a>
               </li>
+              <li>
+                <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li>
+                <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="{% url 'aboutus' %}">About us</a>
+              </li>
+
               {% else %}
               <li>
                 <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="/admin/">login as admin</a>
+              </li>
+              <li>
+                <a class="nav-link nav-item btn btn-outline-dark me-2" aria-current="page" href="{% url 'aboutus' %}">About us</a>
               </li>
               {% endif %}
           </div>
